@@ -12,6 +12,7 @@ namespace MVC_Blog.Controllers
         public ActionResult Index()
         {
             return View();
+            //jnjj
         }
 
 
