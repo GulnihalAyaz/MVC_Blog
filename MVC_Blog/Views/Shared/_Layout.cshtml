@@ -1,0 +1,24 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+
+    @*<link href="~/Content/lib/bootstrap/css/bootstrap.css"/>*@
+    @*Eğer elle yazmayı tam bilmiyorsak sürükle bırak yapmak hatalardan kaçınmak için daha yararlı olur. Yukarıdakini elle yazmıştık ama eksik olduğu için çalışmadı ve sürükle bırak yaparak aşağıdakini ekledik.*@
+    <link href="~/Content/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    @RenderSection(name:"customStyles", required:false)   
+
+</head>
+<body class="container-fluid">
+   @Html.Partial("_Navbar")
+    <div class="container">
+        @RenderBody()
+    </div>
+   @Html.Partial("_Footer")
+    <script src="~/Content/lib/jQuery/jquery-3.3.1.js"></script>
+    <script src="~/Content/lib/bootstrap/js/bootstrap.js"></script>
+    @RenderSection(name: "customScripts", required: false)
+</body>
+</html> 
